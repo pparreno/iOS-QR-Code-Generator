@@ -9,52 +9,48 @@
 #import "QRGenViewController.h"
 #import "FileManager.h"
 
-#import "qr_draw_png.h"
-#import "QR_Encode.h"
+#import "Barcode.h"
 
 @implementation QRGenViewController
 @synthesize imageView;
 
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
- [super viewDidLoad];
- 
- char filename [ [[[FileManager sharedFileManager] qRFile] length] + 1];
- [[[FileManager sharedFileManager] qRFile] getCString:filename maxLength:[[[FileManager sharedFileManager] qRFile] length] + 1 encoding:NSUTF8StringEncoding];
- 
- NSString *sampleString = [NSString stringWithString:@"http://www.kuapay.com"];
- 
- char str [[sampleString length] + 1];
- [sampleString getCString:str maxLength:[sampleString length] + 1 encoding:NSUTF8StringEncoding];
- 
- CQR_Encode encoder;
- encoder.EncodeData(1, 0, true, -1, str);
- 
- QRDrawPNG qrDrawPNG;
- qrDrawPNG.draw(filename, 4, encoder.m_nSymbleSize, encoder.m_byModuleData, NULL);
- 
- NSData *data = [[NSData alloc] initWithContentsOfFile:[[FileManager sharedFileManager] qRFile]];
- UIImage *image = [UIImage imageWithData:data];
- [data release];
- 
- self.imageView.image = image;
+    [super viewDidLoad];
+    
+    NSString *code = @"1001012023034";
+    
+    Barcode *barcode = [[Barcode alloc] init];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    [barcode setupQRCode:code];
+    self.imageView.image = barcode.qRBarcode;
+
+//    Uncomment for one dimensional code 128 barcode.
+//    [barcode setupOneDimBarcode:code type:CODE_128];
+//    self.imageView.image = barcode.oneDimBarcode;
+
+//    Uncomment for one dimensional ean 13 barcode.
+//    [barcode setupOneDimBarcode:code type:EAN_13];
+//    self.imageView.image = barcode.oneDimBarcode;
 }
 
 
 
 - (void)viewDidUnload
 {
- [super viewDidUnload];
- self.imageView = nil;
+    [super viewDidUnload];
+    self.imageView = nil;
 }
 
 
 
 - (void)dealloc
 {
- [super dealloc];
- [imageView release];
+    [super dealloc];
+    [imageView release];
 }
 
 

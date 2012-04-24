@@ -35,16 +35,17 @@
 		CD0E75FF13DF4F1100181C31 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0E75FE13DF4F1100181C31 /* libz.dylib */; };
 		CD0E762D13DF4FE600181C31 /* QRGenViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD0E762C13DF4FE600181C31 /* QRGenViewController.mm */; };
 		CD0E763013DF501A00181C31 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0E762F13DF501A00181C31 /* FileManager.m */; };
+		CDD0706415475B2400F94558 /* Barcode.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD0706315475B2400F94558 /* Barcode.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD0E754E13DF49E300181C31 /* QRGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0E754E13DF49E300181C31 /* BarcodeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0E755213DF49E300181C31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD0E755413DF49E300181C31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD0E755613DF49E300181C31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CD0E755A13DF49E300181C31 /* QRGen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QRGen-Info.plist"; sourceTree = "<group>"; };
+		CD0E755A13DF49E300181C31 /* BarcodeGenerator-Info.plist */ = {isa = PBXFileReference; path = "BarcodeGenerator-Info.plist"; sourceTree = "<group>"; };
 		CD0E755C13DF49E300181C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CD0E755E13DF49E300181C31 /* QRGen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QRGen-Prefix.pch"; sourceTree = "<group>"; };
+		CD0E755E13DF49E300181C31 /* BarcodeGenerator-Prefix.pch */ = {isa = PBXFileReference; path = "BarcodeGenerator-Prefix.pch"; sourceTree = "<group>"; };
 		CD0E755F13DF49E300181C31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD0E756113DF49E300181C31 /* QRGenAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRGenAppDelegate.h; sourceTree = "<group>"; };
 		CD0E756213DF49E300181C31 /* QRGenAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRGenAppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +85,8 @@
 		CD0E762C13DF4FE600181C31 /* QRGenViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRGenViewController.mm; sourceTree = "<group>"; };
 		CD0E762E13DF501A00181C31 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		CD0E762F13DF501A00181C31 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		CDD0706215475B2400F94558 /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
+		CDD0706315475B2400F94558 /* Barcode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Barcode.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +117,7 @@
 		CD0E754F13DF49E300181C31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD0E754E13DF49E300181C31 /* QRGen.app */,
+				CD0E754E13DF49E300181C31 /* BarcodeGenerator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +139,8 @@
 				CD0E756213DF49E300181C31 /* QRGenAppDelegate.m */,
 				CD0E756713DF49E300181C31 /* QRGenViewController.h */,
 				CD0E762C13DF4FE600181C31 /* QRGenViewController.mm */,
+				CDD0706215475B2400F94558 /* Barcode.h */,
+				CDD0706315475B2400F94558 /* Barcode.mm */,
 				CD0E762E13DF501A00181C31 /* FileManager.h */,
 				CD0E762F13DF501A00181C31 /* FileManager.m */,
 				CD0E756413DF49E300181C31 /* MainWindow.xib */,
@@ -150,9 +155,9 @@
 			children = (
 				CD0E763113DF50CB00181C31 /* QRDraw */,
 				CD0E75D713DF4EAA00181C31 /* libpng */,
-				CD0E755A13DF49E300181C31 /* QRGen-Info.plist */,
+				CD0E755A13DF49E300181C31 /* BarcodeGenerator-Info.plist */,
 				CD0E755B13DF49E300181C31 /* InfoPlist.strings */,
-				CD0E755E13DF49E300181C31 /* QRGen-Prefix.pch */,
+				CD0E755E13DF49E300181C31 /* BarcodeGenerator-Prefix.pch */,
 				CD0E755F13DF49E300181C31 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -204,9 +209,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD0E754D13DF49E300181C31 /* QRGen */ = {
+		CD0E754D13DF49E300181C31 /* BarcodeGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD0E756F13DF49E300181C31 /* Build configuration list for PBXNativeTarget "QRGen" */;
+			buildConfigurationList = CD0E756F13DF49E300181C31 /* Build configuration list for PBXNativeTarget "BarcodeGenerator" */;
 			buildPhases = (
 				CD0E754A13DF49E300181C31 /* Sources */,
 				CD0E754B13DF49E300181C31 /* Frameworks */,
@@ -216,9 +221,9 @@
 			);
 			dependencies = (
 			);
-			name = QRGen;
+			name = BarcodeGenerator;
 			productName = QRGen;
-			productReference = CD0E754E13DF49E300181C31 /* QRGen.app */;
+			productReference = CD0E754E13DF49E300181C31 /* BarcodeGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +234,7 @@
 			attributes = {
 				ORGANIZATIONNAME = "Kuapay LLC.";
 			};
-			buildConfigurationList = CD0E754813DF49E300181C31 /* Build configuration list for PBXProject "QRGen" */;
+			buildConfigurationList = CD0E754813DF49E300181C31 /* Build configuration list for PBXProject "BarcodeGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -241,7 +246,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD0E754D13DF49E300181C31 /* QRGen */,
+				CD0E754D13DF49E300181C31 /* BarcodeGenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +290,7 @@
 				CD0E75FB13DF4EAA00181C31 /* pngwutil.c in Sources */,
 				CD0E762D13DF4FE600181C31 /* QRGenViewController.mm in Sources */,
 				CD0E763013DF501A00181C31 /* FileManager.m in Sources */,
+				CDD0706415475B2400F94558 /* Barcode.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,10 +363,10 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QRGen/QRGen-Prefix.pch";
+				GCC_PREFIX_HEADER = "QRGen/BarcodeGenerator-Prefix.pch";
 				HEADER_SEARCH_PATHS = ./QRGen/libpng;
-				INFOPLIST_FILE = "QRGen/QRGen-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "QRGen/BarcodeGenerator-Info.plist";
+				PRODUCT_NAME = BarcodeGenerator;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -371,10 +377,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QRGen/QRGen-Prefix.pch";
+				GCC_PREFIX_HEADER = "QRGen/BarcodeGenerator-Prefix.pch";
 				HEADER_SEARCH_PATHS = ./QRGen/libpng;
-				INFOPLIST_FILE = "QRGen/QRGen-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "QRGen/BarcodeGenerator-Info.plist";
+				PRODUCT_NAME = BarcodeGenerator;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD0E754813DF49E300181C31 /* Build configuration list for PBXProject "QRGen" */ = {
+		CD0E754813DF49E300181C31 /* Build configuration list for PBXProject "BarcodeGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD0E756D13DF49E300181C31 /* Debug */,
@@ -392,13 +398,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD0E756F13DF49E300181C31 /* Build configuration list for PBXNativeTarget "QRGen" */ = {
+		CD0E756F13DF49E300181C31 /* Build configuration list for PBXNativeTarget "BarcodeGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD0E757013DF49E300181C31 /* Debug */,
 				CD0E757113DF49E300181C31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

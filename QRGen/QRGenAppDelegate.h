@@ -11,8 +11,7 @@
 @class QRGenViewController;
 
 @interface QRGenAppDelegate : NSObject <UIApplicationDelegate> 
-{
-}
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet QRGenViewController *viewController;
 
